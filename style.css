@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.sky{
+    height: 30%;
+    width:100%;
+    background-color:skyblue;
+}
+.sky cloud{
+    font-size:50px;
+    animation-name: flow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+}
+.grass{
+    height: 30%;
+    width:100%;
+    background-color: greenyellow;
+}
+.road{
+    height: 40%;
+    width:100%;
+    background-color: grey;
+    position: relative;
+}
+.stripes{
+    height: 10px;
+    border-top: 5px dashed black;
+    position: absolute;
+    top:48%;
+    width:100%;
+}
+
+.stripes p{
+    font-size: 5rem;
+    animation-name: drive;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+}
+@keyframes drive {
+    from{
+        transform: translateX(-2vw);
+    }
+    to{
+        transform: translateX(105vw);
+    }
+}
+@keyframes flow{
+    from{
+        transform: translateX(-2vw);
+    }
+    to{
+        transform: translateX(105vw);
+    }
+}
