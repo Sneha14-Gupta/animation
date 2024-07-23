@@ -61,8 +61,9 @@ main{
 }
 
 @keyframes drive {
-    from{
-    transform: translateX(-2vw);
+    from
+    {
+    transform:translateX(-2vw);
     }
     to{
         transform: translateX(105vw);
