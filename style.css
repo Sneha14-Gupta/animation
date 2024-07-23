@@ -3,65 +3,69 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    overflow: hidden;
+}
 main{
     height: 100vh;
     width: 100vw;
-    
 }
 
 .sky{
-    height: 30%;
-    width:100%;
-    background-color:skyblue;
-}
-.sky cloud{
-    font-size:50px;
-    animation-name: flow;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    animation-timing-function: linear;
-}
-.grass{
-    height: 30%;
-    width:100%;
-    background-color: greenyellow;
-}
-.road{
-    height: 40%;
-    width:100%;
-    background-color: grey;
+    background-image: url(https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    min-height: 100vh;
     position: relative;
+    animation: animatebg 30s linear infinite;
 }
-.stripes{
-    height: 10px;
-    border-top: 5px dashed black;
+@keyframes animatebg {
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: -1000px 0;
+    }
+}
+.moon p{
+    font-size: 7rem;
     position: absolute;
-    top:48%;
-    width:100%;
+    left: 100px;
+    top: 40px;
+    animation: moon 5s linear infinite;
+}
+@keyframes moon {
+    from{
+        left: 15%;
+    }
+    to{
+        left:10px;
+    }
+    
 }
 
-.stripes p{
-    font-size: 5rem;
-    animation-name: drive;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    animation-timing-function: linear;
+.highway{
+    height: 200px;
+    width:100%;
+    display: block;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/018/878/331/small/empty-straight-road-with-marking-horizontal-highway-overhead-view-seamless-roadway-template-carriageway-element-of-city-map-vector.jpg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
+    
+
+.highway p{
+    font-size: 7rem;
+    animation: drive 6s  alternate infinite  ;
+    an
+}
+
 @keyframes drive {
     from{
-        transform: translateX(-2vw);
+    transform: translateX(-2vw);
     }
     to{
         transform: translateX(105vw);
-    }
+    
 }
-@keyframes flow{
-    from{
-        transform: translateX(-2vw);
-    }
-    to{
-        transform: translateX(105vw);
-    }
 }
